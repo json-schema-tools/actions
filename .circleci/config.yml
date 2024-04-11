@@ -19,7 +19,7 @@ commands:
         type: string
         default: "World"
     steps:
-      <<: *setup
+      - setup
       - run: npm install codecov
       - run: npm test
       - run: ./node_modules/.bin/codecov
