@@ -1,9 +1,0 @@
-import:
-  - repository: json-schema-tools/foundation
-    path: '.circleci/setup.yaml'
-
-steps:
-  <<: *steps
-  - run: npm install codecov
-  - run: npm test
-  - run: ./node_modules/.bin/codecov
