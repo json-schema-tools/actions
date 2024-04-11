@@ -1,5 +1,0 @@
-steps:
-  - checkout
-  - restore_cache: *restore-deps-cache
-  - run: npm install
-  - save_cache: *save-deps-cache
