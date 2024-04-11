@@ -1,5 +1,17 @@
 version: 2.1
 
+aliases:
+  # -------------------------
+  #      ALIASES: Caches
+  # -------------------------
+  - &restore-deps-cache
+    key: deps-cache-{{ checksum "package.json" }}
+
+  - &save-deps-cache
+    key: deps-cache-{{ checksum "package.json" }}
+    paths:
+      - ~/project/node_modules
+
 commands:
   setup:
     description: "runs npm install and setups up module cache"
